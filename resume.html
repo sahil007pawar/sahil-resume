@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Pawar - Resume</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #6366f1, #60a5fa, #a7f3d0, #f9fafb);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        .resume-header {
+            background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+            color: #fff;
+            padding: 48px 0 32px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .resume-header::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; top: 0;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255,255,255,0.12) 0%, transparent 80%);
+            pointer-events: none;
+        }
+        .resume-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 4px 32px #6366f1cc;
+        }
+        .resume-header h4 {
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px #60a5fa99;
+        }
+        .section-title {
+            color: #6366f1;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 0 32px 8px #6366f1cc, 0 2px 12px #60a5fa44;
+            margin-bottom: 18px;
+            transition: box-shadow 0.3s;
+        }
+        .profile-img:hover {
+            box-shadow: 0 0 48px 16px #60a5fa, 0 2px 24px #6366f1;
+        }
+        .edu-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 0 16px 2px #6366f1cc, 0 2px 8px #60a5fa44;
+            margin-right: 16px;
+            transition: box-shadow 0.3s;
+        }
+        .edu-logo:hover {
+            box-shadow: 0 0 32px 8px #60a5fa, 0 2px 24px #6366f1;
+        }
+        .resume-section {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 32px 0 #6366f122, 0 2px 12px #60a5fa22;
+            padding: 32px 24px;
+            margin-bottom: 32px;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .resume-section:hover {
+            box-shadow: 0 8px 48px 0 #6366f144, 0 4px 24px #60a5fa33;
+            transform: translateY(-4px) scale(1.01);
+        }
+        .skill-badge {
+            background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+            color: #fff;
+            border-radius: 8px;
+            padding: 6px 16px;
+            margin: 4px 8px 4px 0;
+            font-size: 1rem;
+            display: inline-block;
+            box-shadow: 0 2px 8px #6366f133;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .skill-badge:hover {
+            box-shadow: 0 4px 16px #6366f144;
+            transform: scale(1.08) rotate(-3deg);
+        }
+        .contact-link {
+            color: #6366f1;
+            text-decoration: none;
+            margin-right: 18px;
+            transition: color 0.2s;
+        }
+        .contact-link:hover {
+            text-decoration: underline;
+            color: #60a5fa;
+        }
+    </style>
+</head>
+<body>
+    <header class="resume-header">
+        <img src="images/img1.jpeg" alt="Sahil Pawar" class="profile-img" id="profile-img">
+        <h1>Sahil Pawar</h1>
+        <h4>IT Student | Web Developer | Learner</h4>
+    </header>
+    <main class="container py-5">
+        <!-- Profile Section -->
+        <section class="resume-section mb-4">
+            <div class="section-title">Profile</div>
+            <p>
+                Enthusiastic IT student with a passion for web development and software engineering. Skilled in modern web technologies and always eager to learn and take on new challenges.
+            </p>
+        </section>
+        <!-- Education Section -->
+        <section class="resume-section mb-4">
+            <div class="section-title">Education</div>
+            <div class="d-flex align-items-center mb-2 edu-card" data-tilt data-tilt-max="12" data-tilt-speed="400">
+                <img src="images/img2/college-logo.png" alt="College Logo" class="edu-logo">
+                <div>
+                    <strong>Zeal College of Engineering and Research, Pune</strong><br>
+                    B.E. in Information Technology (2022-2025)<br>
+                    <span class="text-secondary">Pursuing</span>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mb-2 edu-card" data-tilt data-tilt-max="12" data-tilt-speed="400">
+                <img src="https://via.placeholder.com/60x60?text=Logo" alt="School Logo" class="edu-logo">
+                <div>
+                    <strong>Rajendra Junior College, Khandala</strong><br>
+                    HSC (2020-2021) - 56%
+                </div>
+            </div>
+            <div class="d-flex align-items-center edu-card" data-tilt data-tilt-max="12" data-tilt-speed="400">
+                <img src="https://via.placeholder.com/60x60?text=Logo" alt="School Logo" class="edu-logo">
+                <div>
+                    <strong>Rajendra Vidhalay, Khandala</strong><br>
+                    SSC (2019-2020) - 77.00%
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section class="resume-section mb-4">
+            <div class="section-title">Skills</div>
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Bootstrap</span>
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">JQuery</span>
+        </section>
+        <!-- Experience Section (template) -->
+        <section class="resume-section mb-4">
+            <div class="section-title">Experience</div>
+            <div class="text-secondary">(Add your experience here)</div>
+        </section>
+        <!-- Contact Section -->
+        <section class="resume-section mb-4">
+            <div class="section-title">Contact</div>
+            <div class="mb-2"><i class="fas fa-envelope"></i> sahil007pawar@gmail.com</div>
+            <div class="mb-2"><i class="fas fa-phone"></i> +91-XXXXXXXXXX</div>
+            <a href="https://www.linkedin.com/in/sahil-pawar-5097192a4" class="contact-link" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.instagram.com/sahil_pawar.1717" class="contact-link" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script>
+        // 3D tilt for profile image and education cards
+        VanillaTilt.init(document.querySelectorAll(".profile-img, .edu-card"), {
+            max: 18,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.18
+        });
+    </script>
+</body>
+</html>

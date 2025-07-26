@@ -1,0 +1,192 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+.banner {
+    background: linear-gradient(90deg, #1976d2 60%, #4fc3f7 100%);
+    padding: 48px 0 32px 0;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    animation: bannerFade 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes bannerFade {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.banner-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.banner-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.18);
+    background: #fff;
+    flex-shrink: 0;
+    transition: box-shadow 0.3s;
+}
+
+.banner-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-photo:hover {
+    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.25);
+}
+
+.banner-info {
+    color: #fff;
+}
+
+.banner-info h1 {
+    margin: 0 0 6px 0;
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+}
+
+.banner-info .role {
+    font-size: 1.2rem;
+    color: #e1f5fe;
+    margin-bottom: 10px;
+}
+
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 1rem;
+    color: #e1f5fe;
+    margin-top: 8px;
+}
+
+.resume-main {
+    max-width: 700px;
+    margin: 32px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+    padding: 28px 32px;
+    animation: cardFade 0.7s cubic-bezier(.4,0,.2,1);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+@keyframes cardFade {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card:hover {
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.13);
+    transform: translateY(-4px) scale(1.01);
+}
+
+.card h2 {
+    color: #1976d2;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    border-left: 4px solid #4fc3f7;
+    padding-left: 10px;
+    letter-spacing: 0.5px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills li {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 7px 16px;
+    border-radius: 16px;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.skills li:hover {
+    background: #1976d2;
+    color: #fff;
+}
+
+.job, .school, .project {
+    margin-bottom: 18px;
+}
+
+.job h3, .school h3, .project h3 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    color: #1976d2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job span, .school span, .date {
+    font-size: 0.95rem;
+    color: #888;
+    font-weight: normal;
+}
+
+.job ul {
+    margin: 6px 0 0 0;
+    padding-left: 18px;
+}
+
+.project p {
+    margin: 4px 0 0 0;
+    color: #444;
+}
+
+@media (max-width: 900px) {
+    .banner-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .resume-main {
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner {
+        padding: 24px 0 16px 0;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+    }
+    .banner-photo {
+        width: 80px;
+        height: 80px;
+    }
+    .banner-info h1 {
+        font-size: 1.2rem;
+    }
+    .card {
+        padding: 14px 8px;
+    }
+}
